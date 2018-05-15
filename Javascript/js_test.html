@@ -146,5 +146,48 @@ Place your answers below this comment block.
 Note: You have jquery already loaded on the page.
 Please also write your jquery in a no conflict manner.
 -->
+<script>
+jQuery(document).ready(function($){
+
+<!-- Manipulate the Last LI -->
+$("#content li:last-child").css({color: "red"});
+
+<!-- Select specific children from a nested list -->
+let sallyList = $("#content2").find("li:contains('Sally')")
+sallyList.children().css({color: "red"});
+
+<!-- Get a Field Value and Write it to the page -->
+fieldValue()
+$("select").on("change", fieldValue)
+
+function fieldValue(){
+	$(".current-div").remove()
+	let selectedField = $("select option:selected").text();
+	$("fieldset").append("<div class='current-div'>" + selectedField + "</div>")
+}
+<!-- Find Dimensions of an element -->
+let divDim = $("#setDims");
+let divWidth = divDim. innerWidth();
+let divHeight = divDim.innerHeight();
+divDim.text("Width: "+ divWidth +" Height: " +divHeight)
+
+<!-- Events -->
+$("#clickEventLink").on("click", function() {
+	$(this).toggleClass("not-clicked clicked");
+});
+
+<!-- Ajax -->
+$.get("./ajax_return.html", function(data) {
+	$("#jsonResponse").append("<ul></ul>");
+	let response = $.parseJSON(data);
+	$.each(response, function(key, value) {
+		$("#jsonResponse ul").append("<li>'" + key + "': '" + value + "'</li>");
+	});
+	});
+}); <!-- end JQuery Function -->
+
+
+</script>
+
 </body>
 </html>
