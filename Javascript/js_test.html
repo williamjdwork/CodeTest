@@ -149,42 +149,47 @@ Please also write your jquery in a no conflict manner.
 <script>
 jQuery(document).ready(function($){
 
-<!-- Manipulate the Last LI -->
+// Manipulate the Last LI 
 $("#content li:last-child").css({color: "red"});
 
-<!-- Select specific children from a nested list -->
-let sallyList = $("#content2").find("li:contains('Sally')")
+// Select specific children from a nested list 
+let sallyList = $("#content2").find("li:contains('Sally')");
 sallyList.children().css({color: "red"});
 
-<!-- Get a Field Value and Write it to the page -->
+// Get a Field Value and Write it to the page 
 fieldValue()
 $("select").on("change", fieldValue)
-
 function fieldValue(){
-	$(".current-div").remove()
-	let selectedField = $("select option:selected").text();
-	$("fieldset").append("<div class='current-div'>" + selectedField + "</div>")
+	$(".current-div").remove();
+	let selectField = $("select option:selected").text();
+	$("fieldset").append("<div class='current-div'>" + selectField + "</div>")
 }
-<!-- Find Dimensions of an element -->
-let divDim = $("#setDims");
-let divWidth = divDim. innerWidth();
-let divHeight = divDim.innerHeight();
-divDim.text("Width: "+ divWidth +" Height: " +divHeight)
 
-<!-- Events -->
+// Find Dimensions of an element 
+let dimensions = $("#setDims");
+let divWidth = dimensions.innerWidth();
+let divHeight = dimensions.innerHeight();
+dimensions.text("Width: "+ divWidth +" Height: " + divHeight);
+
+// Click Event
 $("#clickEventLink").on("click", function() {
 	$(this).toggleClass("not-clicked clicked");
 });
 
-<!-- Ajax -->
-$.get("./ajax_return.html", function(data) {
-	$("#jsonResponse").append("<ul></ul>");
-	let response = $.parseJSON(data);
-	$.each(response, function(key, value) {
-		$("#jsonResponse ul").append("<li>'" + key + "': '" + value + "'</li>");
-	});
-	});
-}); <!-- end JQuery Function -->
+// Ajax 
+// Call ajax_return.html and write's its json as a "name": "value" list to the following div:
+getFile();
+function ajaxData(data){
+  const output = JSON.parse(data);
+  Object.keys(output).forEach(function(key) {
+    $('#jsonResponse').append('<div>' + key + ': ' + output[key] + '</div>');
+  });
+}
+function getFile(){
+  $.get('./ajax_return.html', ajaxData)
+}
+
+}); // end JQuery Function 
 
 
 </script>

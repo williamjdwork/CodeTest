@@ -1,28 +1,11 @@
 /* Reset Styles */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span{
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline; 
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; 
 }
 body {
   line-height: 1;
@@ -48,14 +31,12 @@ table {
 
 .topnav {
   overflow: hidden;
-   background-color: #7bb020;
 }
 .topnav a {
   float: left;
   display: block;
   color: #000000;
   text-align: bottom;
-  padding: 10px;
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
@@ -73,20 +54,23 @@ table {
   border-radius: 4px; 
   float:right;
   font-size: 12px;
+  padding-top: 9px;
+
 }
 .topnav #menuicon .fa {
   margin-bottom: 5px;
+  margin-top: 10px 
 }
 .topnav #menuicon p {
   color: #595959;
   vertical-align: bottom;
   margin-top: 8px;
-  position: relative;
   font-size: 11px;
 }
 @media (min-width: 768px) {
-  .topnav {
+  .topnav a{
     position: relative;
+    padding: 15px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -109,8 +93,6 @@ table {
 /* Nav Section */
 
 .nav-contact-account .nav-item {
-  padding: 5px;
-  margin-top: 5px;
   margin-bottom: 5px;
   display: table-cell;
   text-align: center;
@@ -119,13 +101,6 @@ table {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
-  border-color: #81e9ef; 
-}
-@media (min-width: 768px) {
-
-  .nav-contact-account .nav-item {
-    
-  }
 }
 .nav-contact-account .nav-item span {
   color: #595959;
@@ -140,42 +115,7 @@ table {
   margin-top: 5%;
   margin-left: 1%;
   margin-bottom: 4px;
-  position: relative; 
-}
-.input-group-addon {
-  background-color: #00767A;
-  color: #fff; 
-}
-.icon-bar {
-  margin: auto;
-  background-color: #009CAA; 
-}
-.navbar-toggle {
-  margin-top: 15px;
-  margin-bottom: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-size: 14px; 
-}
-.navbar-toggle .icon-bar + .icon-bar {
-  margin-top: 4px; 
-}
-.navbar-toggle .bottom-bar {
-  margin-bottom: 6.5px; 
-}
-.navbar-toggle .menu-btn-text {
-  color: #595959;
-  font-size: 12px;
-  letter-spacing: 1px; 
-}
-#nav-toggle-links {
-  float: right;
-  padding-right: 15px; 
-}
-#nav-toggle-links li a {
-  padding-bottom: 10px;
-  color: #323232; 
+  position: relative;
 }
 #header {
   margin-bottom: 0px;
@@ -189,45 +129,9 @@ table {
     padding-right: 4px; 
   } 
   .navbar-brand picture img {
-    height: 80px; 
+    height: 80px;  
   } 
 }
-@media (max-width: 991px) {
-  .navbar-header {
-    float: none;
-  }
-  .navbar-left, .navbar-right {
-    float: none !important; 
-  }
-  .navbar-toggle {
-    display: block; 
-  }
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); 
-  }
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px; 
-  }
-  .navbar-collapse.collapse {
-    display: none !important; 
-  }
-  .navbar-nav {
-    float: none !important;
-    margin-top: 7.5px; 
-  }
-  .navbar-nav > li {
-    float: none; 
-  }
-  .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px; 
-  }
-  .collapse.in {
-    display: block !important; 
-  } 
-} 
 
 /* Search Bar Section */
 
@@ -254,7 +158,7 @@ table {
   font-family: "Lato", sans-serif;
   letter-spacing: 1px;
   padding: 7px;
-  background-color: #00767A;
+  background-color: #016c70;
   color: #ffffff; 
 }
 .searchbar-input-xs {
@@ -280,7 +184,7 @@ table {
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: #00767A; 
+  background-color: #016c70; 
 }
 .link-list {
   width: 100%;
@@ -309,14 +213,14 @@ table {
   }
 }
 @media (min-width: 768px) {
-  #search-bar.row .searchbar-link-group {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-  } 
   #search-bar .row {
     display: flex;
     flex-direction: row; 
+  } 
+  #search-bar .row .searchbar-link-group {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
   } 
 }
 @media (max-width: 991px) {
@@ -357,16 +261,13 @@ table {
   letter-spacing: 1px;
   padding: 7px;
   margin-top: 25px;
-  background-color: #00767A;
+  background-color: #016c70;
   color: #fff; 
 }
 .realtor-info-wrapper .social-icons {
     margin-top: 25px;
     display: flex;
     justify-content: space-between; 
-}
-.realtor-links-wrapper {
-
 }
 .realtor-links-wrapper .realtor-link {
   padding-bottom: 20px; 
@@ -376,7 +277,7 @@ table {
   padding-right: 20px; 
 }
 .realtor-links-wrapper .realtor-link span {
-  color: #00767A;
+  color: #016c70;
   font-size: 16px;
   vertical-align: +5px;
 }
@@ -398,12 +299,6 @@ table {
   }
 }
 @media (max-width: 767px) {
-  .realtor-info-wrapper h4 {
-     margin-top: 10px; 
-  } 
-  .realtor-info-wrapper .btn {
-    margin-top: 20px; 
-  } 
   #realtor-links {
     margin-top: 25px;
     margin-left: 40px; 
@@ -411,6 +306,12 @@ table {
   .realtor-links-wrapper .realtor-link img {
     padding-right: 15px;
   }
+  .realtor-info-wrapper h4 {
+     margin-top: 10px; 
+  } 
+  .realtor-info-wrapper .btn {
+    margin-top: 20px; 
+  } 
 }
 @media (max-width: 767px) and (min-width: 576px) {
   .realtor-info-wrapper h1 {
@@ -443,6 +344,11 @@ table {
     padding-left: 50px;
     width:150%;
   } 
+  #realtor-profile .row #realtor-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  } 
   .realtor-info-wrapper {
     padding-left: 20px;
   } 
@@ -464,11 +370,6 @@ table {
   .realtor-info-wrapper h4 {
      font-size: 12px; 
   } 
-  #realtor-profile .row #realtor-info {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-  } 
 }
 @media (min-width: 992px) {
   #realtor-profile .row {
@@ -481,6 +382,11 @@ table {
     justify-content: center; 
     margin: 0 auto;
     margin-right: 20px;
+  } 
+  #realtor-profile .row #realtor-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
   } 
   .realtor-info-wrapper {
     margin-left: 100px;
@@ -497,13 +403,8 @@ table {
   } 
   .realtor-info-wrapper .social-icons {
     margin-top: 12px;
-     width:135%;
+    width:135%;
   }
-  #realtor-profile .row #realtor-info {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-  } 
 }
 
 
@@ -536,7 +437,7 @@ table {
 }
 #tabs .nav-justified .active .one-tab {
   border: none;
-  color: #00767A; 
+  color: #016c70; 
 }
 #tabs .dropdown-toggle {
   width: 100%;
@@ -546,7 +447,7 @@ table {
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #00767A;
+  color: #016c70;
   display: flex;
   justify-content: space-between; 
 }
@@ -565,17 +466,20 @@ table {
   font-size: 12px;
   font-family: "Open Sans", sans-serif;
   line-height: 2;
-  padding-left: 0; 
-  padding-right: 0;
+  padding-left: 0px; 
+  padding-right: 0px;
   color: "ee82ee";
   padding-left: 10px;
 }
 #about-me .about-me-sidebar {
-  padding-right: 0;
   padding-left: 100px;
 }
 #about-me .about-me-sidebar .designations {
   margin-top: 30px;  
+}
+#about-me .about-me-sidebar p {
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif; 
 }
 #about-me .about-me-sidebar h1 {
   line-height: 2;
@@ -584,15 +488,11 @@ table {
   letter-spacing: 1px;
   margin-bottom: 5px; 
 }
-#about-me .about-me-sidebar p {
-  font-size: 13px;
-  font-family: "Open Sans", sans-serif; 
-}
 #aboutme-drop .btn {
   width:90%;
   border-radius: 0 !important;
   vertical-align: center;
-  color: #00767A;
+  color: #016c70;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px; 
@@ -610,15 +510,15 @@ table {
 #aboutme-drop .dropdown-menu li a {
   padding:10px;
   padding-bottom: 10px;
-  color: #00767A;
+  color: #016c70;
 }
 #aboutme-drop .svg {
   margin-top:10px;
 }
 @media (max-width: 767px) {
   #about-me .about-me-bio {
-    padding-left: 25px;
     font-size: 14px; 
+    padding-left: 25px;
   } 
   #about-me .about-me-sidebar {
     padding: 20px;
@@ -642,14 +542,13 @@ table {
   width: 100%;
   margin-top: 40px;
   padding-bottom: 10px;
-  background-color: #009CAA;
+  background-color: #05a1af;
   color: #fff;
 }
 #footer .row {
   margin-top: 24px;
   margin-bottom: 24px; 
-
- }
+}
 .footer-left {
   font-size: 12px; 
 }
@@ -670,15 +569,14 @@ table {
   justify-content: space-between;
 }
 .footer-left .social-icons img {
-    height:20px;
-
+  height:20px;
 }
 .footer-right .footer-links {
   margin-top: 30px;
   text-decoration: underline;
+  align-content: space-between;
   display: flex;
   flex-direction: row;
-  align-content: space-between;
 }
 .footer-right .footer-links .footer-link a {
   color: #ffffff;
